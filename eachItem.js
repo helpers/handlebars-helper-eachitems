@@ -1,5 +1,5 @@
 /**
- * Handlebars Helpers: {{eachPage}}
+ * Handlebars Helpers: {{eachItems}}
  * Copyright (c) 2013 Jon Schlinkert
  * Licensed under the MIT License (MIT).
  */
@@ -11,18 +11,18 @@ var path = require('path');
 var fs = require('fs');
 
 // node_modules
-var _     = require('lodash');
+var _ = require('lodash');
 
 // Export helpers
 module.exports.register = function (Handlebars, options, params) {
 
 
   /**
-   * {{each}}
+   * {{eachItems}}
    * @param  {Object} context
    * @param  {Object} options
    */
-  Handlebars.registerHelper('eachPage', function(context, options) {
+  Handlebars.registerHelper('eachItems', function(context, options) {
     var fn = options.fn;
     var inverse = options.inverse;
     var i = 0;
