@@ -15,6 +15,7 @@ var _ = require('lodash');
 
 // Export helpers
 module.exports = function (config) {
+  var Handlebars = config.Handlebars;
   var helpers = {};
 
   /**
