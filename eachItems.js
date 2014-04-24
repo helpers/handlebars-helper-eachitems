@@ -14,15 +14,15 @@ var fs = require('fs');
 var _ = require('lodash');
 
 // Export helpers
-module.exports.register = function (Handlebars, options, params) {
-
+module.exports = function (config) {
+  var helpers = {};
 
   /**
    * {{eachItems}}
    * @param  {Object} context
    * @param  {Object} options
    */
-  Handlebars.registerHelper('eachItems', function(context, options) {
+  helpers.eachItems = function(context, options) {
     var fn = options.fn;
     var inverse = options.inverse;
     var i = 0;
@@ -70,5 +70,7 @@ module.exports.register = function (Handlebars, options, params) {
     }
 
     return ret;
-  });
+  };
+
+  return helpers;
 };
